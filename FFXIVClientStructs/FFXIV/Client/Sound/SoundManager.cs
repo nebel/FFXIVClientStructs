@@ -18,21 +18,22 @@ public unsafe partial struct SoundManager {
     [FieldOffset(0x0031)] public bool Disabled;
     [FieldOffset(0x0034)] public float MasterVolume;
     [FieldOffset(0x0038)] public float ActiveVolume;
-    [FieldOffset(0x003C), FixedSizeArray] internal FixedSizeArray19<float> _volume;
-    [FieldOffset(0x0088), FixedSizeArray] internal FixedSizeArray19<float> _unkVolume2; // All are 1.0f
-    [FieldOffset(0x00D4), FixedSizeArray] internal FixedSizeArray19<float> _unkVolume3; // All are 1.0f
-    [FieldOffset(0x0120), FixedSizeArray] internal FixedSizeArray19<float> _unkVolume4; // All are 1.0f
-    [FieldOffset(0x016C), FixedSizeArray] internal FixedSizeArray19<bool> _channelMuted;
-    [FieldOffset(0x017F), FixedSizeArray] internal FixedSizeArray19<bool> _channelAlwaysOn;
+    [FieldOffset(0x003C), FixedSizeArray] internal FixedSizeArray21<float> _volume;
+    [FieldOffset(0x0090), FixedSizeArray] internal FixedSizeArray21<float> _unkVolume2; // All are 1.0f
+    [FieldOffset(0x00E4), FixedSizeArray] internal FixedSizeArray21<float> _unkVolume3; // All are 1.0f
+    [FieldOffset(0x0138), FixedSizeArray] internal FixedSizeArray21<float> _unkVolume4; // All are 1.0f
+    [FieldOffset(0x018C), FixedSizeArray] internal FixedSizeArray21<float> _unkVolume5; // All are 1.0f
+    [FieldOffset(0x01D8), FixedSizeArray] internal FixedSizeArray21<bool> _channelMuted;
+    [FieldOffset(0x01ED), FixedSizeArray] internal FixedSizeArray21<bool> _channelMutedInBackground;
 
-    [FieldOffset(0x01C9)] public bool MasterEnabled;
-    [FieldOffset(0x01CA)] public bool IsSoundAlways;
-    [FieldOffset(0x01CB)] public bool SoundEnabled;
-    [FieldOffset(0x01CC)] public bool WindowInactive;
+    [FieldOffset(0x0241)] public bool IsMasterMuted;
+    [FieldOffset(0x0242)] public bool MuteSoundWhenInactive;
+    [FieldOffset(0x0243)] public bool IsSoundMuted;
+    [FieldOffset(0x0244)] public bool WindowInactive;
 
-    [FieldOffset(0x02A0)] public nint CriticalSection;
+    [FieldOffset(0x0320)] public nint CriticalSection;
 
-    [FieldOffset(0x02C8)] public nint EventHandle;
+    [FieldOffset(0x0348)] public nint EventHandle;
 
     /// <summary>
     /// Calculates effective volume
